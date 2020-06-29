@@ -1,48 +1,48 @@
+//
+// Created by lenovo on 2020/6/11.
+//
+
 #include <iostream>
 #include <vector>
-#include <stack>
-#include <unordered_set>
-#include <unordered_map>
+#include <string>
 #include <algorithm>
+#include <unordered_map>
+#include <climits>
+#include <stack>
 
 using namespace std;
-
-// LeetCode 739
 
 class Solution {
 public:
     vector<int> dailyTemperatures(vector<int> &T) {
-        unsigned temp[101] = {0};
-        vector<int> ans(T.size());
+        vector<int> res(T.size());
+        int maps[101];
+        fill(maps, maps + 101, INT_MAX);
         stack<int> stacks;
+        stacks.push(INT_MAX);
         for (int i = T.size() - 1; i >= 0; --i) {
-            if (stacks.empty()) {
-                ans[i] = 0;
-                temp[T[i]] = i;
-                stacks.push(T[i]);
-            } else if (T[i] < stacks.top()) {
-                ans[i] = temp[stacks.top()] - i;
-                stacks.push(T[i]);
-                temp[T[i]] = i;
-            } else {
-                while(!stacks.empty() && T[i] >= stacks.top()){
+            // stack
+            if (T[i] >=  stacks.top()) {
+                stacks.pop();
+                while (T[i] >= stacks.top()) {
                     stacks.pop();
                 }
-                if(stacks.empty()){
-                    ans[i] = 0;
-                    temp[T[i]] = i;
-                    stacks.push(T[i]);
-                }else{
-                    ans[i] = temp[stacks.top()] - i;
-                    stacks.push(T[i]);
-                    temp[T[i]] = i;
-                }
             }
+
+            // map
+            maps[T[i]] = i;
+
+            if (stacks.top() == INT_MAX) {
+                res[i] = 0;
+            } else {
+                res[i] = maps[stacks.top()] - maps[T[i]];
+            }
+
+            stacks.push(T[i]);
         }
-        return ans;
+        return res;
     }
 };
-
 
 int main() {
     vector<int> vec;
@@ -56,8 +56,9 @@ int main() {
     vec.push_back(73);
 
     Solution so;
-    for(auto x : so.dailyTemperatures(vec)){
+    for (auto x: so.dailyTemperatures(vec)) {
         cout << x << endl;
     }
+
     return 0;
 }
