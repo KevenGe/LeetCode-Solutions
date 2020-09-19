@@ -1,27 +1,24 @@
 #include <iostream>
-#include <vector>
+#include <climits>
+#include <stdint.h>
+
 using namespace std;
 
-class Solution
-{
+class Solution {
 public:
-    int hammingWeight(uint32_t n)
-    {
-        int res = 0;
-        uint32_t  n_tmp = 1;
-        for (int i = 0; i < 32; ++i)
-        {
-            if (n & n_tmp)
-            {
-                res ++;
+    int hammingWeight(uint32_t n) {
+        uint32_t t = 1;
+        int ans = 0;
+        for(int i=0;i<32;++i){
+            if(n & t){
+                ans ++;
             }
-            n_tmp = n_tmp << 1;
+            t = t << 1;
         }
-        return res;
+        return ans;
     }
 };
 
-int main()
-{
+int main() {
     return 0;
 }

@@ -1,6 +1,6 @@
-/*
- * LeetCode 55
- */
+//
+// Created by lenovo on 2020-09-19.
+//
 
 #include <iostream>
 #include <vector>
@@ -8,31 +8,29 @@
 
 using namespace std;
 
+/**
+ * @brief solution
+ */
 class Solution {
 public:
+
+    /**
+     * @brief core function
+     * @param nums
+     * @return
+     */
     bool canJump(vector<int> &nums) {
-        int max_far = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (i <= max_far) {
-                max_far = max(max_far, i + nums[i]);
-                if (max_far >= nums.size() - 1) {
-                    return true;
-                }
+
+        int m = 0; ///< the fastest position coule be.
+        for (int i = 0; i < nums.size(); i++) {
+            if (i <= m) {
+                m = max(m, i + nums[i]);
             }
         }
-        return false;
+        return m>= nums.size()-1;
     }
 };
 
 int main() {
-    vector<int> vec;
-    vec.push_back(2);
-    vec.push_back(3);
-    vec.push_back(1);
-    vec.push_back(1);
-    vec.push_back(4);
-
-    Solution so;
-    cout << so.canJump(vec) << endl;
     return 0;
 }

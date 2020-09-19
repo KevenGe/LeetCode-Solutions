@@ -1,45 +1,39 @@
+//
+// Created by lenovo on 2020-09-19.
+//
+
 #include <iostream>
-#include <algorithm>
 #include <vector>
+#include <algorithm>
+#include <climits>
+
 using namespace std;
 
-class Solution
-{
+class Solution {
 public:
-    int coinChange(vector<int> &coins, int amount)
-    {
-        const int INF = 2000000000;
-        int *dp = new int[amount + 1];
-        sort(coins.begin(), coins.end());
+    int coinChange(vector<int> &coins, int amount) {
+        vector<int> dp(amount + 1, amount+1);
         dp[0] = 0;
-        fill(dp + 1, dp + amount + 1, INF);
-        for (int i = 1; i <= coins.size(); ++i)
-        {
-            for (int j = 1; j <= amount; ++j)
-            {
-                if (j - coins[i - 1] >= 0)
-                {
-                    dp[j] = min(dp[j], dp[j - coins[i - 1]] + 1);
+        for (int i = 1; i <= amount; i++) {
+            for (int j = 0; j < coins.size(); j++) {
+                if (i - coins[j] >= 0) {
+                    dp[i] = min(dp[i], dp[i - coins[j]] + 1);
                 }
             }
         }
-        if (dp[amount] == INF)
-        {
-            return -1;
-        }
-        return dp[amount];
+        return dp[amount] > amount ? -1 : dp[amount];
     }
 };
 
-int main()
-{
-    Solution so;
+void runTest(){
     vector<int> vec;
-    vec.push_back(1);
-    vec.push_back(1);
     vec.push_back(2);
-    vec.push_back(5);
 
-    cout << so.coinChange(vec, 11) << endl;
+    Solution so;
+    cout << so.coinChange(vec, 3) << endl;
+}
+
+int main() {
+    runTest();
     return 0;
 }

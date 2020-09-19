@@ -1,97 +1,76 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-class Solution
-{
+class Solution {
 public:
-    int romanToInt(string s)
-    {
-        int ans = 0;
-        for (int i = 0; i < s.length(); ++i)
-        {
-            if (s[i] == 'M')
-            {
-                if (i - 1 >= 0 && s[i - 1] == 'C')
-                {
-                    ans += 800;
+    int romanToInt(string s) {
+        if (s.empty()) {
+            return 0;
+        } else {
+            char ch = s[0];
+            int val;
+            int si = 1;
+            if (ch == 'M') {
+                val = 1000;
+            } else if (ch == 'D') {
+                val = 500;
+            } else if (ch == 'C') {
+                if (s.length() > 1) {
+                    char ch2 = s[1];
+                    if (ch2 == 'M') {
+                        val = 900;
+                        si = 2;
+                    } else if (ch2 == 'D') {
+                        val = 400;
+                        si = 2;
+                    } else {
+                        val = 100;
+                    }
+                } else {
+                    val = 100;
                 }
-                else
-                {
-                    ans += 1000;
+            } else if (ch == 'L') {
+                val = 50;
+            } else if (ch == 'X') {
+                if (s.length() > 1) {
+                    char ch2 = s[1];
+                    if (ch2 == 'C') {
+                        val = 90;
+                        si = 2;
+                    } else if (ch2 == 'L') {
+                        val = 40;
+                        si = 2;
+                    } else {
+                        val = 10;
+                    }
+                } else {
+                    val = 10;
                 }
-            }
-            else if (s[i] == 'D')
-            {
-                if (i - 1 >= 0 && s[i - 1] == 'C')
-                {
-                    ans += 300;
-                }
-                else
-                {
-                    ans += 500;
-                }
-            }
-            else if (s[i] == 'C')
-            {
-                if (i - 1 >= 0 && s[i - 1] == 'X')
-                {
-                    ans += 80;
-                }
-                else
-                {
-                    ans += 100;
-                }
-            }
-            else if (s[i] == 'L')
-            {
-                if (i - 1 >= 0 && s[i - 1] == 'X')
-                {
-                    ans += 30;
-                }
-                else
-                {
-                    ans += 50;
-                }
-            }
-            else if (s[i] == 'X')
-            {
-                if (i - 1 >= 0 && s[i - 1] == 'I')
-                {
-                    ans += 8;
-                }
-                else
-                {
-                    ans += 10;
-                }
-            }
-            else if (s[i] == 'V')
-            {
-                if (i - 1 >= 0 && s[i - 1] == 'I')
-                {
-                    ans += 3;
-                }
-                else
-                {
-                    ans += 5;
+            } else if (ch == 'V') {
+                val = 5;
+            } else if (ch == 'I') {
+                if (s.length() > 1) {
+                    char ch2 = s[1];
+                    if (ch2 == 'X') {
+                        val = 9;
+                        si = 2;
+                    } else if (ch2 == 'V') {
+                        val = 4;
+                        si = 2;
+                    } else {
+                        val = 1;
+                    }
+                } else {
+                    val = 1;
                 }
             }
-            else
-            {
-                ans += 1;
-            }
+            return val + romanToInt(s.substr(si));
         }
-        return ans;
     }
 };
 
-int main()
-{
-    Solution so;
-    while(true)
-    {
-        string ans="";
-        cin >> ans;
-        cout << so.romanToInt(ans) << endl;
-    }
+int main() {
     return 0;
 }

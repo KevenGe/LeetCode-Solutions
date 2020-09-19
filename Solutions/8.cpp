@@ -1,62 +1,81 @@
 #include <iostream>
-#include <string>
 #include <limits.h>
-
+#include <string>
+#include <ctype.h>
 using namespace std;
 
-// leetcode 8
-
-class Solution {
+class Solution
+{
 public:
-    int myAtoi(const string &str) {
-        enum STATE {
-            s1,             //
-            s2              //
-        };
-        STATE state = s1;
+    int myAtoi(string str)
+    {
         int res = 0;
-        bool sign = true;
-        for (auto &ch: str) {
-            if (state == s1) {
-                if (isdigit(ch)) {
-                    res = ch - '0';
-                    state = s2;
-                }else if (ch == '+'){
-                    state = s2;
-                }else if (ch == '-') {
-                    sign = false;
-                    state = s2;
-                } else if (ch != ' ') {
+        int state = 1;
+        bool fu = false;
+        for (int i = 0; i < str.length(); ++i)
+        {
+            if (state == 1)
+            {
+                if (str[i] == ' ')
+                {
+                    continue;
+                }
+                else if (str[i] == '+')
+                {
+                    state = 2;
+                }
+                else if (str[i] <= '9' && str[i] >= '0')
+                {
+                    res = res * 10 + int(str[i] - '0');
+                    state = 2;
+                }
+                else if (str[i] == '-' && i + 1 < str.length() && str[i + 1] <= '9' && str[i + 1] >= '0')
+                {
+                    res = 0 - int(str[i + 1] - '0');
+                    i++;
+                    state = 2;
+                    fu = true;
+                }
+                else
+                {
                     break;
                 }
-            } else {
-                if (isdigit(ch)) {
-                    if (sign) {
-                        if (res > INT_MAX / 10 || (res == INT_MAX / 10 && ch - '0' > 7)) {
-                            res = INT_MAX;
-                            break;
-                        }
-                        res = res * 10 + (ch - '0');
-                    } else {
-                        if (res < INT_MIN / 10 || (res == INT_MIN / 10 && ch - '0' > 8)) {
-                            res = INT_MIN;
-                            break;
-                        }
-                        res = res * 10 - (ch - '0');
+            }
+            else if (state == 2)
+            {
+                if (str[i] <= '9' && str[i] >= '0')
+                {
+                    int num = int(str[i] - '0');
+                    if (fu)
+                    {
+                        num = -num;
                     }
-                } else {
+
+                    if (res > INT_MAX / 10 || (res == INT_MAX / 10 && num > INT_MAX % 10))
+                    {
+                        res = INT_MAX;
+                        break;
+                    }
+                    if (res < INT_MIN / 10 || (res == INT_MIN / 10 && num < INT_MIN % 10))
+                    {
+                        res = INT_MIN;
+                        break;
+                    }
+                    res = res * 10 + num;
+                }
+                else
+                {
                     break;
                 }
             }
         }
-
         return res;
     }
 };
 
-
-int main() {
+int main()
+{
     Solution so;
-    cout << so.myAtoi("+") << endl;
+    cout << so.myAtoi("2147483648") << endl;
     return 0;
 }
