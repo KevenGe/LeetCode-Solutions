@@ -1,50 +1,48 @@
-//
-// Created by lenovo on 2020-07-16.
-//
-
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
-class Solution {
-private:
-    static constexpr int UNCOLORED = 0;
-    static constexpr int RED = 1;
-    static constexpr int GREEN = 2;
-    vector<int> color;
-    bool valid;
+class Solution
+{
+    vector<int> status;
+    vector<vector<int>> *graph;
+    bool isBad = false;
 
 public:
-    void dfs(int node, int c, const vector<vector<int>> &graph) {
-        color[node] = c;
-        int cNei = (c == RED ? GREEN : RED);
-        for (int neighbor: graph[node]) {
-            if (color[neighbor] == UNCOLORED) {
-                dfs(neighbor, cNei, graph);
-                if (!valid) {
-                    return;
-                }
-            } else if (color[neighbor] != cNei) {
-                valid = false;
+    bool isBipartite(vector<vector<int>> &graph)
+    {
+        this->graph = &graph;
+        status.assign(graph.size(), 0);
+        status[0] = 1;
+        dfs(0);
+        return !isBad;
+    }
+    void dfs(int i)
+    {
+        if (isBad)
+        {
+            return;
+        }
+        for (int j = 0; j < graph[i].size(); j++)
+        {
+            int tar = graph[i][j];
+            if (status[j] == 0)
+            {
+                status[j] = -status[i];
+                dfs(j);
+            }
+            else if (status[j] == status[i])
+            {
+                isBad = true;
                 return;
             }
         }
     }
-
-    bool isBipartite(vector<vector<int>> &graph) {
-        int n = graph.size();
-        valid = true;
-        color.assign(n, UNCOLORED);
-        for (int i = 0; i < n && valid; ++i) {
-            if (color[i] == UNCOLORED) {
-                dfs(i, RED, graph);
-            }
-        }
-        return valid;
-    }
 };
 
-int main() {
+int main()
+{
     return 0;
 }
