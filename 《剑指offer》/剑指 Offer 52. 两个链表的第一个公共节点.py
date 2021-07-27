@@ -17,21 +17,11 @@ class Solution:
         a = headA
         b = headB
 
-        while a is not None and b is not None:
-            if a is b:
-                return a
-            else:
-                if a.next is not None:
-                    a = a.next
-                else:
-                    a = headB
+        while a != b:
+            a = a.next if a else headB
+            b = b.next if b else headA
 
-                if b.next is not None:
-                    b = b.next
-                else:
-                    b = headA
-
-        return None
+        return a
 
 
 if __name__ == "__main__":
