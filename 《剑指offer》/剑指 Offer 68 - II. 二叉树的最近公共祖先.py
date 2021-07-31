@@ -13,33 +13,13 @@ class Solution:
     def lowestCommonAncestor(
         self, root: TreeNode, p: TreeNode, q: TreeNode
     ) -> TreeNode:
-        def getLines(root: TreeNode, p: TreeNode):
-            if root is None:
-                return []
+        if root is None or p.val == root.val or q.val == root.val:
+            return root
 
-            if root.val == p.val:
-                return [root]
+        l = self.lowestCommonAncestor(root.left, p, q)
+        r = self.lowestCommonAncestor(root.right, p, q)
 
-            t1 = getLines(root.left, p)
-            t2 = getLines(root.right, p)
-
-            if len(t1) == 0 and len(t2) == 0:
-                return []
-            elif len(t1) != 0:
-                t1.insert(0, root)
-                return t1
-            else:
-                t2.insert(0, root)
-                return t2
-
-        l1 = getLines(root, p)
-        l2 = getLines(root, q)
-
-        for i in range(min(len(l1), len(l2))):
-            if l1[i].val != l2[i].val:
-                return l1[i - 1]
-
-        return l1[len(min(l1, l2)) - 1]
+        return r if l is None else (l if r is None else root)
 
 
 if __name__ == "__main__":
