@@ -2,14 +2,14 @@
 # https://leetcode-cn.com/problems/network-delay-time/
 
 from typing import List
-from queue import PriorityQueue
+import heapq
 
 
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         # getD
         d = {}
-        for i in range(1,n+1):
+        for i in range(1, n + 1):
             d[i] = []
         for ti in times:
             d[ti[0]].append([ti[1], ti[2]])
@@ -17,18 +17,17 @@ class Solution:
         dis = [100000000] * (n + 1)
         dis[k] = 0
 
-        q = PriorityQueue()
-        q.put([0, k])
-        while q.empty() != True:
-            t = q.get()
-
+        q = [[0, k]]
+        heapq.heapify(q)
+        while len(q) != 0:
+            t = heapq.heappop(q)
             if t[0] > dis[t[1]]:
                 continue
 
             for tar, di in d[t[1]]:
                 if dis[tar] > dis[t[1]] + di:
                     dis[tar] = dis[t[1]] + di
-                    q.put([dis[tar], tar])
+                    heapq.heappush(q, [dis[tar], tar])
 
         mm = 0
         for i in range(1, len(dis)):
