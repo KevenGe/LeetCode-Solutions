@@ -8,25 +8,25 @@ class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         if len(nums) == 0 or k == 0:
             return []
-        q = []
-        for i in range(0, k):
-            if len(q) == 0:
-                q.append(nums[i])
+        leftMax = [0] * len(nums)
+        rightMax = [0] * len(nums)
+
+        for i in range(len(nums)):
+            if i % k == 0:
+                leftMax[i] = nums[i]
             else:
-                while len(q) > 0 and nums[i] > q[-1]:
-                    q.pop()
-                q.append(nums[i])
+                leftMax[i] = max(leftMax[i - 1], nums[i])
 
-        ans = [q[0]]
-        for i in range(k, len(nums)):
-            lt = nums[i - k]
-            if lt == q[0]:
-                q.pop(0)
+        for i in range(len(nums) - 1, -1, -1):
+            if (i + 1) % k == 0 or i == len(nums) - 1:
+                rightMax[i] = nums[i]
+            else:
+                rightMax[i] = max(rightMax[i + 1], nums[i])
 
-            while len(q) > 0 and nums[i] > q[-1]:
-                q.pop()
-            q.append(nums[i])
-            ans.append(q[0])
+        ans = []
+        for r in range(k - 1, len(nums)):
+            t = max(leftMax[r], rightMax[r - k + 1])
+            ans.append(t)
         return ans
 
 
