@@ -2,25 +2,31 @@
 # https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/
 
 from typing import List
-import heapq
 
 
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         if len(nums) == 0 or k == 0:
             return []
-        dp = []
-        for i in range(k):
-            dp.append((-nums[i], i))
-        heapq.heapify(dp)
-        # print(dp)
+        q = []
+        for i in range(0, k):
+            if len(q) == 0:
+                q.append(nums[i])
+            else:
+                while len(q) > 0 and nums[i] > q[-1]:
+                    q.pop()
+                q.append(nums[i])
 
-        ans = [-dp[0][0]]
+        ans = [q[0]]
         for i in range(k, len(nums)):
-            heapq.heappush(dp, (-nums[i], i))
-            while dp[0][1] <= i - k:
-                heapq.heappop(dp)
-            ans.append(-dp[0][0])
+            lt = nums[i - k]
+            if lt == q[0]:
+                q.pop(0)
+
+            while len(q) > 0 and nums[i] > q[-1]:
+                q.pop()
+            q.append(nums[i])
+            ans.append(q[0])
         return ans
 
 
