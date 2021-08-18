@@ -4,28 +4,31 @@
 
 class Solution:
     def checkRecord(self, n: int) -> int:
-        dp = [[[0 for k in range(3)] for j in range(2)] for i in range(n + 1)]
-        dp[0][0][0] = 1
+        dp = [[0 for k in range(3)] for j in range(2)]
+        dp[0][0] = 1
 
         m = 10 ** 9 + 7
 
         for i in range(1, n + 1):
+            dpNew = [[0 for k in range(3)] for j in range(2)]
 
             for j in range(2):
                 for k in range(3):
-                    dp[i][j][0] = (dp[i][j][0] + dp[i - 1][j][k]) % m
+                    dpNew[j][0] = (dpNew[j][0] + dp[j][k]) % m
 
             for k in range(3):
-                dp[i][1][0] = (dp[i][1][0] + dp[i - 1][0][k]) % m
+                dpNew[1][0] = (dpNew[1][0] + dp[0][k]) % m
 
             for j in range(2):
                 for k in range(2):
-                    dp[i][j][k + 1] = (dp[i][j][k + 1] + dp[i - 1][j][k]) % m
+                    dpNew[j][k + 1] = (dpNew[j][k + 1] + dp[j][k]) % m
+            
+            dp = dpNew
 
         ans = 0
         for j in range(2):
             for k in range(3):
-                ans = (ans + dp[n][j][k]) % m
+                ans = (ans + dp[j][k]) % m
         return ans
 
 
