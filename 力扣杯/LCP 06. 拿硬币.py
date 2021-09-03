@@ -2,14 +2,12 @@
 # https://leetcode-cn.com/problems/na-ying-bi/
 
 from typing import List
+from functools import reduce
 
 
 class Solution:
     def minCount(self, coins: List[int]) -> int:
-        count = 0
-        for coin in coins:
-            count += (coin + 1) // 2
-        return count
+        return reduce(lambda x, y: x + (y + 1) // 2, coins, 0)
 
 
 if __name__ == "__main__":
