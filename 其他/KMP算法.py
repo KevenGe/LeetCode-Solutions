@@ -58,7 +58,48 @@ class Solution:
         return next
 
 
+class Solution2:
+    def find(self, s: str, t: str):
+        next = self.initNext(t)
+        i = 0
+        j = 0
+        while True:
+            if i == len(s):
+                return False
+            elif j == -1:
+                i += 1
+                j = 0
+            elif j == len(t):
+                return True
+            else:
+                if s[i] == t[j]:
+                    i += 1
+                    j += 1
+                else:
+                    j = next[j]
+
+    def initNext(self, t: str):
+        next = [-1] * len(t)
+        next[0] = -1
+
+        for i in range(len(t) - 1):
+            k = next[i]
+            while True:
+                if k == -1:
+                    next[i + 1] = 0
+                    break
+                elif t[k] == t[i]:
+                    next[i + 1] = k + 1
+                    break
+                else:
+                    k = next[k]
+
+        return next
+
+
 if __name__ == "__main__":
-    so = Solution()
-    print(so.find("abcdefghigklmn", "cd"))
+    # so = Solution()
+    # print(so.find("abcdefghigklmn", "cd"))
+    s2 = Solution2()
+    print(s2.find("abcdefghigklmn", "ebcd"))
 
