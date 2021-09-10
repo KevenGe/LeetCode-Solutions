@@ -4,8 +4,7 @@
 ################################################################################
 
 from typing import List
-
-
+65
 class Solution:
     def chalkReplacer(self, chalk: List[int], k: int) -> int:
         sums = sum(chalk)

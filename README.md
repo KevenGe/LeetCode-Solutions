@@ -16,3 +16,10 @@ And This project is just created for **Leetcode**. I will keep on adding new sol
 
 -   [ ] 项目规范化
 -   [ ] 结构合理化
+-   [ ] 目录记录
+
+## 已完成部分
+
+- [《剑指offer》](./《剑指offer》/readme.md)
+- [《程序员面试金典（第6版）》](./程序员面试金典（第%206%20版）/readme.md)
+- [《LeetCode Solutions》](./Solutions%20for%20Python/readme.md)
