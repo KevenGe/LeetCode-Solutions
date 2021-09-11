@@ -93,6 +93,7 @@
 |557| 反转字符串中的单词 III|[click]()|[click]()|
 |576| 出界的路径数|[click](https://leetcode-cn.com/problems/out-of-boundary-paths/)|[click](https://leetcode-cn.com/problems/out-of-boundary-paths/)|
 |581| 最短无序连续子数组|[click](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/)|[click](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/)|
+|600| 不含连续1的非负整数|[click](https://leetcode-cn.com/problems/non-negative-integers-without-consecutive-ones/)|[click](https://leetcode-cn.com/problems/non-negative-integers-without-consecutive-ones/)|
 |61| 旋转链表|[click](https://leetcode-cn.com/problems/rotate-list/)|[click](https://leetcode-cn.com/problems/rotate-list/)|
 |611| 有效三角形的个数|[click](https://leetcode-cn.com/problems/valid-triangle-number/)|[click](https://leetcode-cn.com/problems/valid-triangle-number/)|
 |664| 奇怪的打印机|[click](def strangePrinter(self, s: str) -> int:)|[click](def strangePrinter(self, s: str) -> int:)|
