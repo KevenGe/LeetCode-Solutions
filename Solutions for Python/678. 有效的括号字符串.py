@@ -13,35 +13,16 @@ class Solution:
                 smin += 1
                 smax += 1
             elif s[i] == ")":
-                smin -= 1
+                smin = max(smin - 1, 0)
                 smax -= 1
+                if smax < 0:
+                    return False
+
             else:
-                smin -= 1
+                smin = max(smin - 1, 0)
                 smax += 1
 
-            if smax < 0:
-                break
-
-        if smax < 0 or smin > 0:
-            return False
-
-        smin = 0
-        smax = 0
-        for i in range(len(s) - 1, -1, -1):
-            if s[i] == ")":
-                smin += 1
-                smax += 1
-            elif s[i] == "(":
-                smin -= 1
-                smax -= 1
-            else:
-                smin -= 1
-                smax += 1
-
-            if smax < 0:
-                break
-
-        return smin <= 0 <= smax
+        return smin == 0
 
 
 ################################################################################
@@ -51,7 +32,9 @@ if __name__ == "__main__":
     print(
         solution.checkValidString(
             # "*((*((**(((*)*****((*("
-            "*("
+            # "*("
+            # "(*)"
+            "**)))"
         )
     )
 
