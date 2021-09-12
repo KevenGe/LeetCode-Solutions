@@ -98,6 +98,7 @@
 |611| 有效三角形的个数|[click](https://leetcode-cn.com/problems/valid-triangle-number/)|[click](https://leetcode-cn.com/problems/valid-triangle-number/)|
 |664| 奇怪的打印机|[click](def strangePrinter(self, s: str) -> int:)|[click](def strangePrinter(self, s: str) -> int:)|
 |671| 二叉树中第二小的节点|[click](https://leetcode-cn.com/problems/second-minimum-node-in-a-binary-tree/)|[click](https://leetcode-cn.com/problems/second-minimum-node-in-a-binary-tree/)|
+|678| 有效的括号字符串|[click](https://leetcode-cn.com/problems/valid-parenthesis-string/)|[click](https://leetcode-cn.com/problems/valid-parenthesis-string/)|
 |68| 文本左右对齐|[click](https://leetcode-cn.com/problems/text-justification/)|[click](https://leetcode-cn.com/problems/text-justification/)|
 |692| 前K个高频单词|[click](om functools import cmp_to_key)|[click](om functools import cmp_to_key)|
 |704| 二分查找|[click](https://leetcode-cn.com/problems/binary-search/)|[click](https://leetcode-cn.com/problems/binary-search/)|
