@@ -84,6 +84,7 @@
 |518| 零钱兑换 II|[click]()|[click]()|
 |525| 连续数组|[click]()|[click]()|
 |526| 优美的排列|[click](https://leetcode-cn.com/problems/beautiful-arrangement/)|[click](https://leetcode-cn.com/problems/beautiful-arrangement/)|
+|524| 通过删除字母匹配到字典里最长单词|[click](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)|[click](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)|
 |528| 按权重随机选择|[click](https://leetcode-cn.com/problems/random-pick-with-weight/)|[click](https://leetcode-cn.com/problems/random-pick-with-weight/)|
 |530| 二叉搜索树的最小绝对差|[click](om collections import deque)|[click](om collections import deque)|      
 |538| 把二叉搜索树转换为累加树|[click](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)|[click](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)|
