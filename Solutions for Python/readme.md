@@ -25,6 +25,7 @@
 |1583| 统计不开心的朋友|[click](https://leetcode-cn.com/problems/count-unhappy-friends/)|[click](https://leetcode-cn.com/problems/count-unhappy-friends/)|
 |1588| 所有奇数长度子数组的和|[click](https://leetcode-cn.com/problems/sum-of-all-odd-length-subarrays/)|[click](https://leetcode-cn.com/problems/sum-of-all-odd-length-subarrays/)|
 |160| 相交链表|[click](ass ListNode:)|[click](ass ListNode:)|
+|162| 寻找峰值|[click](https://leetcode-cn.com/problems/find-peak-element/)|[click](https://leetcode-cn.com/problems/find-peak-element/)|
 |1646| 获取生成数组中的最大值|[click](https://leetcode-cn.com/problems/get-maximum-in-generated-array/)|[click](https://leetcode-cn.com/problems/get-maximum-in-generated-array/)|
 |165| 比较版本号|[click](https://leetcode-cn.com/problems/compare-version-numbers/)|[click](https://leetcode-cn.com/problems/compare-version-numbers/)|
 |171| Excel表列序号|[click](https://leetcode-cn.com/problems/excel-sheet-column-number/)|[click](https://leetcode-cn.com/problems/excel-sheet-column-number/)|
