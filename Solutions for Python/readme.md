@@ -57,6 +57,7 @@
 |279| 完全平方数|[click]()|[click]()|
 |287| 寻找重复数|[click](port unittest)|[click](port unittest)|
 |289| 生命游戏|[click]()|[click]()|
+|292| Nim 游戏|[click](https://leetcode-cn.com/problems/nim-game/)|[click](https://leetcode-cn.com/problems/nim-game/)|
 |295| 数据流的中位数|[click](https://leetcode-cn.com/problems/find-median-from-data-stream/)|[click](https://leetcode-cn.com/problems/find-median-from-data-stream/)|
 |300| 最长递增子序列|[click](https://leetcode-cn.com/problems/longest-increasing-subsequence/)|[click](https://leetcode-cn.com/problems/longest-increasing-subsequence/)|
 |31| 下一个排列|[click](https://leetcode-cn.com/problems/next-permutation/)|[click](https://leetcode-cn.com/problems/next-permutation/)|
