@@ -12,8 +12,8 @@ class Solution:
         for i in range(len(s)):
             if s[i] != "0":
                 dp[i + 1] += dp[i]
-            if i > 1 and s[i - 2] != 0 and int(s[i - 2 : i]) <= 26:
-                dp[i] += dp[i - 2]
+            if i >= 1 and s[i - 1] != "0" and int(s[i - 1 : i + 1]) <= 26:
+                dp[i + 1] += dp[i - 1]
         return dp[len(dp) - 1]
 
 
@@ -22,4 +22,4 @@ class Solution:
 
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.numDecodings("00"))
+    print(solution.numDecodings("06"))
