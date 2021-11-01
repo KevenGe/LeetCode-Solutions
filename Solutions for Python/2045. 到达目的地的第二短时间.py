@@ -1,58 +1,61 @@
 # 2045. 到达目的地的第二短时间
 # https://leetcode-cn.com/problems/second-minimum-time-to-reach-destination/
 
+################################################################################
+
 from typing import List
-from queue import Queue
 
 
 class Solution:
     def secondMinimum(
         self, n: int, edges: List[List[int]], time: int, change: int
     ) -> int:
+        edgesList = [[] for i in range(n + 1)]
+        for s, t in edges:
+            edgesList[s].append(t)
+            edgesList[t].append(s)
 
-        edgs = []
-        for i in range(n):
-            edgs.append([])
-        for a, b in edges:
-            edgs[a - 1].append(b)
-            edgs[b - 1].append(a)
+        passedTime = 0  # passed time
 
-        dis = [float("inf")] * n
-        dis[0] = 0
+        curStacks = set()
+        curStacks.add(1)
 
-        que = Queue()
-        que.put(1)
+        visitedTimes = {}
 
-        foundTheBest = False
+        ans = -1
 
-        spendTime = 0
+        while True:
 
-        while que.empty() == False:
-            if (spendTime // change) % 2 == 1:
-                spendTime = ((spendTime // change) + 1) * change
+            if (passedTime // change) % 2 == 1:
+                passedTime = (passedTime // change + 1) * change
+            passedTime += time
 
-            spendTime += time
+            nextStacks = set()
+            for s in curStacks:
+                if s in visitedTimes:
+                    if visitedTimes[s] > 2:
+                        continue
+                    else:
+                        visitedTimes[s] += 1
+                else:
+                    visitedTimes[s] = 1
 
-            nextQueSet = set()
-            for i in range(que.qsize()):
-                s = que.get()
-                for j in range(len(edgs[s - 1])):
-                    if edgs[s - 1][j] == n:
-                        if foundTheBest:
-                            return spendTime
-                        else:
-                            foundTheBest = True
-                    nextQueSet.add(edgs[s - 1][j])
+                for t in edgesList[s]:
+                    if t == n:
+                        if ans == -1:
+                            ans = -2
+                        elif ans == -3:
+                            return passedTime
+                    nextStacks.add(t)
+            if ans == -2:
+                ans = -3
 
-            nextQue = Queue()
-            for t in nextQueSet:
-                nextQue.put(t)
-            que = nextQue
+            curStacks = nextStacks
 
-        return -1
 
+################################################################################
 
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.secondMinimum(2, [[1, 2]], 3, 2))
+    print(solution.secondMinimum(5, [[1, 2], [1, 3], [1, 4], [3, 4], [4, 5]], 3, 5))
 
