@@ -26,32 +26,83 @@
 
 
 ################################################################################
+# from typing import List
+
+
+# class Solution:
+#     def trap(self, height: List[int]) -> int:
+#         """双指针法"""
+
+#         ans = 0
+
+#         left = 0
+#         right = len(height) - 1
+
+#         maxLeft = 0
+#         maxRight = 0
+
+#         while left < right:
+#             if height[left] <= height[right]:
+#                 if height[left] < maxLeft:
+#                     ans += min(maxLeft, height[right]) - height[left]
+#                 maxLeft = max(maxLeft, height[left])
+#                 left += 1
+#             else:
+#                 if height[right] < maxRight:
+#                     ans += min(maxRight, height[left]) - height[right]
+#                 maxRight = max(maxRight, height[right])
+#                 right -= 1
+
+#         return ans
+
+
+################################################################################
+
 from typing import List
 
 
 class Solution:
     def trap(self, height: List[int]) -> int:
-        """双指针法"""
+        """双向"""
+        maxHeight = -1
+        maxIndex = -1
+        for i, h in enumerate(height):
+            if h > maxHeight:
+                maxHeight = h
+                maxIndex = i
 
         ans = 0
 
-        left = 0
-        right = len(height) - 1
+        # from left
+        curHeight = 0
 
-        maxLeft = 0
-        maxRight = 0
+        for i in range(0, maxIndex):
 
-        while left < right:
-            if height[left] <= height[right]:
-                if height[left] < maxLeft:
-                    ans += min(maxLeft, height[right]) - height[left]
-                maxLeft = max(maxLeft, height[left])
-                left += 1
+            if height[i] < curHeight:
+                ans -= height[i]
+
             else:
-                if height[right] < maxRight:
-                    ans += min(maxRight, height[left]) - height[right]
-                maxRight = max(maxRight, height[right])
-                right -= 1
+                ans -= curHeight
+
+                wid = maxIndex - i - 1
+                hei = height[i] - curHeight
+                ans += wid * hei
+
+                curHeight = height[i]
+
+        # from right
+        curHeight = 0
+
+        for i in range(len(height) - 1, maxIndex, -1):
+
+            if height[i] < curHeight:
+                ans -= height[i]
+            else:
+                ans -= curHeight
+                wid = i - maxIndex - 1
+                hei = height[i] - curHeight
+                ans += wid * hei
+                curHeight = height[i]
 
         return ans
 
@@ -61,6 +112,6 @@ class Solution:
 
 if __name__ == "__main__":
     solution = Solution()
-    # print(solution.trap([0, 1 , 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))
-    print(solution.trap([4, 2, 0, 3, 2, 5]))
+    print(solution.trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))
+    # print(solution.trap([4, 2, 0, 3, 2, 5]))
 
