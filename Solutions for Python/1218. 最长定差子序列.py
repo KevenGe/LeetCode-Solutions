@@ -3,22 +3,16 @@
 
 ################################################################################
 from typing import List
+from collections import defaultdict
 
 
 class Solution:
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
-        ans = 1
-        befDict = {}  # value: index
-        dp = [0 for i in range(len(arr))]
+
+        dp = defaultdict(int)
         for i in range(len(arr)):
-            t = arr[i] - difference
-            if t in befDict:
-                dp[i] = dp[befDict[t]] + 1
-            else:
-                dp[i] = 1
-            ans = max(ans, dp[i])
-            befDict[arr[i]] = i
-        return ans
+            dp[arr[i]] = dp[arr[i] - difference] + 1
+        return max(dp.values())
 
 
 ################################################################################
