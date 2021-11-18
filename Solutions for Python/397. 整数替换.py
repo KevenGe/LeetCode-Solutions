@@ -1,3 +1,7 @@
+# 397. 整数替换
+# https://leetcode-cn.com/problems/integer-replacement/
+
+################################################################################
 
 
 class Solution:
@@ -5,8 +9,8 @@ class Solution:
         count = 0
         while n != 1:
             if n == 3:
-              count += 2;
-              break  
+                count += 2
+                break
             elif n % 2 == 0:
                 n = n // 2
             else:
@@ -16,3 +20,9 @@ class Solution:
                     n = n - 1
             count += 1
         return count
+
+
+################################################################################
+
+if __name__ == "__main__":
+    solution = Solution()
