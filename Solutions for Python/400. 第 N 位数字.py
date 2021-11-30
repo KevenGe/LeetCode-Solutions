@@ -2,11 +2,13 @@
 # https://leetcode-cn.com/problems/nth-digit/
 
 
+################################################################################
 class Solution:
     def findNthDigit(self, n: int) -> int:
 
         numWidth = 0
         t = 10
+        i = 1
         for i in range(1, 100):
             if n >= t:
                 n -= t
@@ -18,3 +20,5 @@ class Solution:
         return int(
             list(str((10 ** (i - 1) if i - 1 > 0 else 0) + n // numWidth))[n % numWidth]
         )
+
+################################################################################
