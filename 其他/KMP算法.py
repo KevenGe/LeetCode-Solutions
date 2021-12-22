@@ -97,9 +97,47 @@ class Solution2:
         return next
 
 
+class Solution3:
+    def find(self, s: str, t: str):
+        if t == "":
+            return 0
+
+        next = self.init_next(t)
+        j = 0
+        i = 0
+
+        while i < len(s) and j < len(t):
+            if s[i] == t[j]:
+                i += 1
+                j += 1
+            else:
+                j = next[j]
+                if j == -1:
+                    i += 1
+                    j = 0
+
+        return j == len(t)
+
+    def init_next(self, t: str):
+        next = [0] * len(t)
+        next[0] = -1
+
+        for i in range(2, len(t)):
+
+            j = next[i - 1]
+            while j != -1:
+                if t[i - 1] == t[j]:
+                    next[i] = next[i - 1] + 1
+                    break
+                else:
+                    j = next[j]
+        return next
+
+
 if __name__ == "__main__":
     # so = Solution()
     # print(so.find("abcdefghigklmn", "cd"))
+    # s2 = Solution2()
+    # print(s2.find("abcdefghigklmn", "ebcd"))
     s2 = Solution2()
-    print(s2.find("abcdefghigklmn", "ebcd"))
-
+    print(s2.find("abcdefghigklmn", "igk"))
