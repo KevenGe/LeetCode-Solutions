@@ -127,7 +127,7 @@ class Solution3:
             j = next[i - 1]
             while j != -1:
                 if t[i - 1] == t[j]:
-                    next[i] = k + 1
+                    next[i] = j + 1
                     break
                 else:
                     j = next[j]
