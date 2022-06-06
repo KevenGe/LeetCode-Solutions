@@ -1,1 +1,8 @@
+# IDE
 .idea/*
+.vscode/*
+
+# pytest
+__pycache__/*
+.pytest_cache/*
+*/__pycache__/*
