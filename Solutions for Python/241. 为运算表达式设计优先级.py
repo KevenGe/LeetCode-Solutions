@@ -22,7 +22,7 @@ class Solution:
                 expressions.append(expression[i])
                 i = i + 1
 
-        @lru_cache(2**len(expressions))
+        @lru_cache(2 ** len(expressions))
         def dfs(l: int, r: int) -> List[int]:
             if l > r:
                 return []
