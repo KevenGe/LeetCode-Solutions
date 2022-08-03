@@ -44,22 +44,39 @@ def rand7():
 #         return (x - 1) % 10 + 1
 
 
+# 解决思路1
+# class Solution:
+#     def rand10(self):
+#         """
+#         :rtype: int
+#         """
+#         x = rand7()
+#         while x > 5:
+#             x = rand7()
+
+#         y = rand7()
+#         while y == 7:
+#             y = rand7()
+#         y = y % 2
+
+#         z = x + y * 5
+#         return z
+
+
+# 解决思路2
+
+# The rand7() API is already defined for you.
+# def rand7():
+# @return a random integer in the range 1 to 7
 class Solution:
     def rand10(self):
-        """
-        :rtype: int
-        """
-        x = rand7()
-        while x > 5:
-            x = rand7()
 
-        y = rand7()
-        while y == 7:
-            y = rand7()
-        y = y % 2
+        t = 99
+        while t > 40:
+            t = (rand7() - 1) * 7 + rand7()
 
-        z = x + y * 5
-        return z
+        t = (t - 1) % 10 + 1
+        return t
 
 
 if __name__ == "__main__":

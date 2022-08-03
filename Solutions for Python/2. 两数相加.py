@@ -1,3 +1,6 @@
+# 2. 两数相加
+# https://leetcode.cn/problems/add-two-numbers/
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -31,7 +34,6 @@ class Solution:
             ans = ans.next
 
             l1 = l1.next
-        
 
         while l2 is not None:
             t = l2.val + add
@@ -42,9 +44,9 @@ class Solution:
             ans = ans.next
 
             l2 = l2.next
-        
+
         if add != 0:
             ans.next = ListNode(add)
-        
+
         head = head.next
         return head
