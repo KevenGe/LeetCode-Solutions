@@ -10,45 +10,38 @@ class Solution:
         nums.sort()
 
         ans: List[List[int]] = []
-        pm = set()
-        for m in range(len(nums) - 2):
-            if nums[m] in pm:
-                continue
-
-            pm.add(nums[m])
+        m = 0
+        while m < len(nums) - 2:
 
             t = -nums[m]
             l = m + 1
             r = len(nums) - 1
-            pl = set()
-            pr = set()
 
             while l < r:
                 n = nums[l] + nums[r]
 
                 if n == t:
                     ans.append([nums[m], nums[l], nums[r]])
-
-                    pr.add(nums[r])
                     while l < r:
-                        if nums[r] in pr:
-                            r -= 1
-                        else:
+                        r -= 1
+                        if nums[r] != nums[r + 1]:
                             break
                 elif n > t:
-                    pr.add(nums[r])
                     while l < r:
-                        if nums[r] in pr:
-                            r -= 1
-                        else:
+                        r -= 1
+                        if nums[r] != nums[r + 1]:
                             break
+
                 elif n < t:
-                    pl.add(nums[l])
                     while l < r:
-                        if nums[l] in pl:
-                            l += 1
-                        else:
+                        l += 1
+                        if nums[l] != nums[l - 1]:
                             break
+
+            while m < len(nums) - 2:
+                m += 1
+                if nums[m] != nums[m - 1]:
+                    break
 
         return ans
 
