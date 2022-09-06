@@ -9,18 +9,12 @@ class Solution:
         last_left = [-1] * len(s)
         last_right = [-1] * len(s)
 
-        def df():
-            return -1
-
-        last_one = defaultdict(df)
+        last_one = defaultdict(lambda: -1)
         for i, c in enumerate(s):
             last_left[i] = last_one[c]
             last_one[c] = i
-        
-        def df2():
-            return len(s)
 
-        last_one = defaultdict(df2)
+        last_one = defaultdict(lambda: len(s))
         for i, c in enumerate(reversed(s)):
             last_right[len(s) - 1 - i] = last_one[c]
             last_one[c] = len(s) - 1 - i
