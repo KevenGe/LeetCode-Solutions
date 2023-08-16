@@ -1,0 +1,30 @@
+[
+  {
+    "name": "第 273 场周赛",
+    "origin_strs": ["2373", "2374", "2375", "2376"],
+    "place": 744,
+    "place_sum": 4368,
+    "url": "/contest/weekly-contest-273/"
+  },
+  {
+    "name": "第 84 场双周赛",
+    "origin_strs": ["2363", "2364", "2365", "2366"],
+    "place": 568,
+    "place_sum": 4574,
+    "url": "/contest/biweekly-contest-84"
+  },
+  {
+    "name": "第 306 场周赛",
+    "origin_strs": ["2119", "2120", "2121", "2122"],
+    "place": 1208,
+    "place_sum": 7500,
+    "url": "/contest/weekly-contest-306/"
+  },
+  {
+    "name": "第 68 场双周赛",
+    "origin_strs": ["2114", "2115", "2116", "2117"],
+    "place": 572,
+    "place_sum": 2584,
+    "url": "/contest/biweekly-contest-68"
+  }
+]
