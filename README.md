@@ -10,16 +10,17 @@ And This project is just created for **Leetcode**. I will keep on adding new sol
 
 > 永远相信美好的事情即将发生
 
-这里主要是使用 C++编写的 LeetCode 算法，少部分使用 Python 编写。
+这里主要是使用 C++ 和 Python 编写的 LeetCode 算法。
 
-## TODO
+## 题目
 
--   [ ] 项目规范化
--   [ ] 结构合理化
--   [ ] 目录记录
+参考文档[problemset.md]("./docs/problems.json")
 
-## 已完成部分
+## 竞赛
 
-- [《剑指offer》](./《剑指offer》/readme.md)
-- [《程序员面试金典（第6版）》](./程序员面试金典（第%206%20版）/readme.md)
-- [《LeetCode Solutions》](./Solutions%20for%20Python/readme.md)
+参考文档[problemset.md]("./docs/contests.json")
+
+## 数据（卡片）
+
+- [《剑指offer》](./books/《剑指offer》/readme.md)
+- [《程序员面试金典（第6版）》](./books/程序员面试金典（第%206%20版）/readme.md)
