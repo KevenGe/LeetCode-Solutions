@@ -1,5 +1,5 @@
 # 题目集合
-完成：485/3207=0.15, C++: 185, Python: 332
+完成：485/3207=0.15, C++: 186, Python: 332
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -468,7 +468,7 @@
 | [2122. 还原原数组](https://leetcode.cn/problems/recover-the-original-array/) | 困难 |  |  | ✓ |
 | [2166. 设计位集](https://leetcode.cn/problems/design-bitset/) | 中等 |  | ✓ |  |
 | [2180. 统计各位数字之和为偶数的整数个数](https://leetcode.cn/problems/count-integers-with-even-digit-sum/) | 简单 |  | ✓ |  |
-| [2236. 判断根结点是否等于子结点之和](https://leetcode.cn/problems/root-equals-sum-of-children/) | 简单 |  |  | ✓ |
+| [2236. 判断根结点是否等于子结点之和](https://leetcode.cn/problems/root-equals-sum-of-children/) | 简单 |  | ✓ | ✓ |
 | [2309. 兼具大小写的最好英文字母](https://leetcode.cn/problems/greatest-english-letter-in-upper-and-lower-case/) | 简单 |  | ✓ |  |
 | [2315. 统计星号](https://leetcode.cn/problems/count-asterisks/) | 简单 |  | ✓ |  |
 | [2319. 判断矩阵是否是一个 X 矩阵](https://leetcode.cn/problems/check-if-matrix-is-x-matrix/) | 简单 |  | ✓ |  |
