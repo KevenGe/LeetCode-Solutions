@@ -14,11 +14,11 @@ And This project is just created for **Leetcode**. I will keep on adding new sol
 
 ## 题目
 
-参考文档[problemset.md]("./docs/problems.json")
+参考文档[problems.md](./docs/problems.json)
 
 ## 竞赛
 
-参考文档[problemset.md]("./docs/contests.json")
+参考文档[contests.md]("./docs/contests.json")
 
 ## 数据（卡片）
 
