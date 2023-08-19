@@ -1,5 +1,5 @@
 # 题目集合
-完成：482/3207=0.15, C++: 185, Python: 329
+完成：483/3207=0.15, C++: 185, Python: 330
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -260,6 +260,7 @@
 | [589. N 叉树的前序遍历](https://leetcode.cn/problems/n-ary-tree-preorder-traversal/) | 简单 |  |  | ✓ |
 | [590. N 叉树的后序遍历](https://leetcode.cn/problems/n-ary-tree-postorder-traversal/) | 简单 |  |  | ✓ |
 | [594. 最长和谐子序列](https://leetcode.cn/problems/longest-harmonious-subsequence/) | 简单 |  |  | ✓ |
+| [595. 大的国家](https://leetcode.cn/problems/big-countries/) | 简单 |  |  | ✓ |
 | [598. 范围求和 II](https://leetcode.cn/problems/range-addition-ii/) | 简单 |  |  | ✓ |
 | [599. 两个列表的最小索引总和](https://leetcode.cn/problems/minimum-index-sum-of-two-lists/) | 简单 |  |  | ✓ |
 | [600. 不含连续1的非负整数](https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones/) | 困难 |  |  | ✓ |

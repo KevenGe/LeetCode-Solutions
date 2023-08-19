@@ -1,3 +1,6 @@
+""" 从JSON文档中生成markdown文件
+"""
+
 import json
 import pathlib
 
