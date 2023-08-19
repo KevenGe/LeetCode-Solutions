@@ -1,5 +1,5 @@
 # 题目集合
-完成：485/3207=0.15, C++: 186, Python: 332
+完成：486/3207=0.15, C++: 187, Python: 332
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -98,6 +98,7 @@
 | [139. 单词拆分](https://leetcode.cn/problems/word-break/) | 中等 |  | ✓ |  |
 | [141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/) | 简单 |  |  | ✓ |
 | [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/) | 中等 |  |  | ✓ |
+| [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/) | 简单 |  | ✓ |  |
 | [146. LRU 缓存](https://leetcode.cn/problems/lru-cache/) | 中等 |  | ✓ |  |
 | [148. 排序链表](https://leetcode.cn/problems/sort-list/) | 中等 |  |  | ✓ |
 | [150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/) | 中等 |  |  | ✓ |
