@@ -1,5 +1,5 @@
 # 题目集合
-完成：488/3207=0.15, C++: 188, Python: 333
+完成：489/3207=0.15, C++: 189, Python: 333
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -476,6 +476,7 @@
 | [2315. 统计星号](https://leetcode.cn/problems/count-asterisks/) | 简单 |  | ✓ |  |
 | [2319. 判断矩阵是否是一个 X 矩阵](https://leetcode.cn/problems/check-if-matrix-is-x-matrix/) | 简单 |  | ✓ |  |
 | [2325. 解密消息](https://leetcode.cn/problems/decode-the-message/) | 简单 |  | ✓ |  |
+| [2337. 移动片段得到字符串](https://leetcode.cn/problems/move-pieces-to-obtain-a-string/) | 中等 |  | ✓ |  |
 | [2363. 合并相似的物品](https://leetcode.cn/problems/merge-similar-items/) | 简单 |  |  | ✓ |
 | [2364. 统计坏数对的数目](https://leetcode.cn/problems/count-number-of-bad-pairs/) | 中等 |  |  | ✓ |
 | [2365. 任务调度器 II](https://leetcode.cn/problems/task-scheduler-ii/) | 中等 |  |  | ✓ |
