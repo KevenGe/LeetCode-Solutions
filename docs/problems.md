@@ -1,5 +1,5 @@
 # 题目集合
-完成：487/3207=0.15, C++: 188, Python: 332
+完成：488/3207=0.15, C++: 188, Python: 333
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -379,6 +379,7 @@
 | [1111. 有效括号的嵌套深度](https://leetcode.cn/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/) | 中等 |  | ✓ |  |
 | [1137. 第 N 个泰波那契数](https://leetcode.cn/problems/n-th-tribonacci-number/) | 简单 |  |  | ✓ |
 | [1143. 最长公共子序列](https://leetcode.cn/problems/longest-common-subsequence/) | 中等 |  | ✓ |  |
+| [1148. 文章浏览 I](https://leetcode.cn/problems/article-views-i/) | 简单 |  |  | ✓ |
 | [1154. 一年中的第几天](https://leetcode.cn/problems/day-of-the-year/) | 简单 |  |  | ✓ |
 | [1160. 拼写单词](https://leetcode.cn/problems/find-words-that-can-be-formed-by-characters/) | 简单 |  | ✓ |  |
 | [1162. 地图分析](https://leetcode.cn/problems/as-far-from-land-as-possible/) | 中等 |  | ✓ |  |
