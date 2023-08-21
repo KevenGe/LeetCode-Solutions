@@ -1,5 +1,5 @@
 # 题目集合
-完成：489/3207=0.15, C++: 189, Python: 333
+完成：490/3207=0.15, C++: 190, Python: 333
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -484,6 +484,7 @@
 | [2373. 矩阵中的局部最大值](https://leetcode.cn/problems/largest-local-values-in-a-matrix/) | 简单 |  |  | ✓ |
 | [2374. 边积分最高的节点](https://leetcode.cn/problems/node-with-highest-edge-score/) | 中等 |  |  | ✓ |
 | [2375. 根据模式串构造最小数字](https://leetcode.cn/problems/construct-smallest-number-from-di-string/) | 中等 |  |  | ✓ |
+| [2400. 恰好移动 k 步到达某一位置的方法数目](https://leetcode.cn/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/) | 中等 |  | ✓ |  |
 | [2815. 数组中的最大数对和](https://leetcode.cn/problems/max-pair-sum-in-an-array/) | 简单 |  | ✓ |  |
 | [2816. 翻倍以链表形式表示的数字](https://leetcode.cn/problems/double-a-number-represented-as-a-linked-list/) | 中等 |  | ✓ |  |
 | [2817. 限制条件下元素之间的最小绝对差](https://leetcode.cn/problems/minimum-absolute-difference-between-elements-with-constraint/) | 中等 |  | ✓ |  |
