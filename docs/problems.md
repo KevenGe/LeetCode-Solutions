@@ -1,5 +1,5 @@
 # 题目集合
-完成：490/3207=0.15, C++: 190, Python: 333
+完成：491/3207=0.15, C++: 191, Python: 333
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -332,6 +332,7 @@
 | [836. 矩形重叠](https://leetcode.cn/problems/rectangle-overlap/) | 简单 |  | ✓ |  |
 | [837. 新 21 点](https://leetcode.cn/problems/new-21-game/) | 中等 |  | ✓ |  |
 | [844. 比较含退格的字符串](https://leetcode.cn/problems/backspace-string-compare/) | 简单 |  |  | ✓ |
+| [849. 到最近的人的最大距离](https://leetcode.cn/problems/maximize-distance-to-closest-person/) | 中等 |  | ✓ |  |
 | [851. 喧闹和富有](https://leetcode.cn/problems/loud-and-rich/) | 中等 |  |  | ✓ |
 | [852. 山脉数组的峰顶索引](https://leetcode.cn/problems/peak-index-in-a-mountain-array/) | 中等 |  |  | ✓ |
 | [859. 亲密字符串](https://leetcode.cn/problems/buddy-strings/) | 简单 |  |  | ✓ |
