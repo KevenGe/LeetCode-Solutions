@@ -1,5 +1,5 @@
 # 题目集合
-完成：492/3207=0.15, C++: 191, Python: 334
+完成：493/3207=0.15, C++: 192, Python: 334
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -441,6 +441,7 @@
 | [1743. 从相邻元素对还原数组](https://leetcode.cn/problems/restore-the-array-from-adjacent-pairs/) | 中等 |  |  | ✓ |
 | [1757. 可回收且低脂的产品](https://leetcode.cn/problems/recyclable-and-low-fat-products/) | 简单 |  |  | ✓ |
 | [1763. 最长的美好子字符串](https://leetcode.cn/problems/longest-nice-substring/) | 简单 |  |  | ✓ |
+| [1782. 统计点对的数目](https://leetcode.cn/problems/count-pairs-of-nodes/) | 困难 |  | ✓ |  |
 | [1816. 截断句子](https://leetcode.cn/problems/truncate-sentence/) | 简单 |  |  | ✓ |
 | [1818. 绝对差值和](https://leetcode.cn/problems/minimum-absolute-sum-difference/) | 中等 |  |  | ✓ |
 | [1838. 最高频元素的频数](https://leetcode.cn/problems/frequency-of-the-most-frequent-element/) | 中等 |  |  | ✓ |
