@@ -1,5 +1,5 @@
 # 题目集合
-完成：494/3207=0.15, C++: 193, Python: 334
+完成：495/3207=0.15, C++: 193, Python: 335
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -447,6 +447,7 @@
 | [1818. 绝对差值和](https://leetcode.cn/problems/minimum-absolute-sum-difference/) | 中等 |  |  | ✓ |
 | [1838. 最高频元素的频数](https://leetcode.cn/problems/frequency-of-the-most-frequent-element/) | 中等 |  |  | ✓ |
 | [1846. 减小和重新排列数组后的最大元素](https://leetcode.cn/problems/maximum-element-after-decreasing-and-rearranging/) | 中等 |  |  | ✓ |
+| [1873. 计算特殊奖金](https://leetcode.cn/problems/calculate-special-bonus/) | 简单 |  |  | ✓ |
 | [1877. 数组中最大数对和的最小值](https://leetcode.cn/problems/minimize-maximum-pair-sum-in-array/) | 中等 |  |  | ✓ |
 | [1893. 检查是否区域内所有整数都被覆盖](https://leetcode.cn/problems/check-if-all-the-integers-in-a-range-are-covered/) | 简单 |  |  | ✓ |
 | [1894. 找到需要补充粉笔的学生编号](https://leetcode.cn/problems/find-the-student-that-will-replace-the-chalk/) | 中等 |  |  | ✓ |
