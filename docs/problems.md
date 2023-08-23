@@ -1,5 +1,5 @@
 # 题目集合
-完成：491/3207=0.15, C++: 191, Python: 333
+完成：492/3207=0.15, C++: 191, Python: 334
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -429,6 +429,7 @@
 | [1663. 具有给定数值的最小字符串](https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value/) | 中等 |  | ✓ |  |
 | [1664. 生成平衡数组的方案数](https://leetcode.cn/problems/ways-to-make-a-fair-array/) | 中等 |  | ✓ |  |
 | [1669. 合并两个链表](https://leetcode.cn/problems/merge-in-between-linked-lists/) | 中等 |  | ✓ |  |
+| [1683. 无效的推文](https://leetcode.cn/problems/invalid-tweets/) | 简单 |  |  | ✓ |
 | [1705. 吃苹果的最大数目](https://leetcode.cn/problems/maximum-number-of-eaten-apples/) | 中等 |  |  | ✓ |
 | [1706. 球会落何处](https://leetcode.cn/problems/where-will-the-ball-fall/) | 中等 |  |  | ✓ |
 | [1711. 大餐计数](https://leetcode.cn/problems/count-good-meals/) | 中等 |  |  | ✓ |
