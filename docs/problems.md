@@ -1,5 +1,5 @@
 # 题目集合
-完成：493/3207=0.15, C++: 192, Python: 334
+完成：494/3207=0.15, C++: 193, Python: 334
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -392,6 +392,7 @@
 | [1221. 分割平衡字符串](https://leetcode.cn/problems/split-a-string-in-balanced-strings/) | 简单 |  |  | ✓ |
 | [1224. 最大相等频率](https://leetcode.cn/problems/maximum-equal-frequency/) | 困难 |  |  | ✓ |
 | [1248. 统计「优美子数组」](https://leetcode.cn/problems/count-number-of-nice-subarrays/) | 中等 |  | ✓ |  |
+| [1267. 统计参与通信的服务器](https://leetcode.cn/problems/count-servers-that-communicate/) | 中等 |  | ✓ |  |
 | [1269. 停在原地的方案数](https://leetcode.cn/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/) | 困难 |  |  | ✓ |
 | [1282. 用户分组](https://leetcode.cn/problems/group-the-people-given-the-group-size-they-belong-to/) | 中等 |  |  | ✓ |
 | [1288. 删除被覆盖区间](https://leetcode.cn/problems/remove-covered-intervals/) | 中等 |  |  | ✓ |
