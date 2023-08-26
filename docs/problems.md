@@ -1,5 +1,5 @@
 # 题目集合
-完成：495/3207=0.15, C++: 193, Python: 335
+完成：496/3207=0.15, C++: 194, Python: 335
 
 | 题目 | 难度 | 题解 | C++ | Python |
 | -- | -- | -- | -- | -- |
@@ -138,6 +138,7 @@
 | [222. 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes/) | 中等 |  |  | ✓ |
 | [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/) | 简单 |  | ✓ |  |
 | [227. 基本计算器 II](https://leetcode.cn/problems/basic-calculator-ii/) | 中等 |  |  | ✓ |
+| [228. 汇总区间](https://leetcode.cn/problems/summary-ranges/) | 简单 |  | ✓ |  |
 | [229. 多数元素 II](https://leetcode.cn/problems/majority-element-ii/) | 中等 |  |  | ✓ |
 | [231. 2 的幂](https://leetcode.cn/problems/power-of-two/) | 简单 |  | ✓ |  |
 | [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one/) | 困难 |  |  | ✓ |
