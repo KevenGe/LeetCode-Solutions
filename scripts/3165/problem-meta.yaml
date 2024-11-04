@@ -1,0 +1,5 @@
+META:
+  ID: 3165
+  TITLE_CN: 不包含相邻元素的子序列的最大和
+  HARD_LEVEL: HARD
+  URL: https://leetcode.cn/problems/maximum-sum-of-subsequence-with-non-adjacent-elements/
