@@ -1,0 +1,5 @@
+META:
+  ID: 1621
+  TITLE_CN: 大小为 K 的不重叠线段的数目
+  HARD_LEVEL: MEDIUM
+  URL: https://leetcode.cn/problems/number-of-sets-of-k-non-overlapping-line-segments/
