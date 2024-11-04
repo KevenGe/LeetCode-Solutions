@@ -1,0 +1,5 @@
+META:
+  ID: 3175
+  TITLE_CN: 找到连续赢 K 场比赛的第一位玩家
+  HARD_LEVEL: MEDIUM
+  URL: https://leetcode.cn/problems/find-the-first-player-to-win-k-games-in-a-row/
