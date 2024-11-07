@@ -28,7 +28,7 @@ def parse_problem_dir(problem_dir: Path) -> Any:
         )
 
     solution_num = get_solution_num(problem_dir)
-    problem_dir_url = "../problemset/"+quote(problem_dir.name) + "/"
+    problem_dir_url = "../problemset/" + quote(problem_dir.name) + "/"
 
     solutions = []
     for solution_idx in range(solution_num):
@@ -70,7 +70,8 @@ def parse_problem_dir(problem_dir: Path) -> Any:
                     ),
                     "C++": (
                         str(
-                            problem_dir_url + "solution_v{}.cpp".format(solution_idx + 1)
+                            problem_dir_url
+                            + "solution_v{}.cpp".format(solution_idx + 1)
                             if (
                                 problem_dir
                                 / "solution_v{}.cpp".format(solution_idx + 1)
@@ -136,12 +137,30 @@ def main() -> None:
 
     problem_num = len(problemset)
 
+    # problem_easy_num, problem_medium_num, problem_hard_num =
+    problem_easy_num = len(
+        list(filter(lambda x: x["HARD_LEVEL"] == "EASY", problemset))
+    )
+    problem_medium_num = len(
+        list(filter(lambda x: x["HARD_LEVEL"] == "MEDIUM", problemset))
+    )
+    problem_hard_num = len(
+        list(filter(lambda x: x["HARD_LEVEL"] == "HARD", problemset))
+    )
+
     logger.info("problem num = {}", problem_num)
 
     # write template
     buf = StringIO()
     my_template = Template(filename="./template.md")
-    ctx = Context(buf, problem_num=problem_num, problemset=problemset)
+    ctx = Context(
+        buf,
+        problem_num=problem_num,
+        problem_easy_num=problem_easy_num,
+        problem_medium_num=problem_medium_num,
+        problem_hard_num=problem_hard_num,
+        problemset=problemset,
+    )
 
     my_template.render_context(ctx)
     print(buf.getvalue())
