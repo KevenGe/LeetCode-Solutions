@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '300'
+  TITLE_CN: 最长递增子序列
+  URL: https://leetcode.cn/problems/longest-increasing-subsequence/

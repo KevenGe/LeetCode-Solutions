@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '2121'
+  TITLE_CN: 相同元素的间隔之和
+  URL: https://leetcode.cn/problems/intervals-between-identical-elements/

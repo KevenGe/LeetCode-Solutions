@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '2000'
+  TITLE_CN: 反转单词前缀
+  URL: https://leetcode.cn/problems/reverse-prefix-of-word/

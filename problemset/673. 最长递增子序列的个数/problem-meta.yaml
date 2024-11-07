@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '673'
+  TITLE_CN: 最长递增子序列的个数
+  URL: https://leetcode.cn/problems/number-of-longest-increasing-subsequence/

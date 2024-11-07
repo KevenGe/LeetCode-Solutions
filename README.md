@@ -14,7 +14,7 @@ And This project is just created for **Leetcode**. I will keep on adding new sol
 
 ## 题目
 
-参考文档[problems.md](./docs/problems.json)
+参考文档[problems.md](./docs/problemset.md)
 
 ## 竞赛
 

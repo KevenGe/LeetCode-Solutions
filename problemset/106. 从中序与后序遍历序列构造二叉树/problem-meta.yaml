@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '106'
+  TITLE_CN: 从中序与后序遍历序列构造二叉树
+  URL: https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/

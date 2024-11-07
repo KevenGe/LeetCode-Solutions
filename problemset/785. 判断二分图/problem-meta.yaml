@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '785'
+  TITLE_CN: 判断二分图
+  URL: https://leetcode.cn/problems/is-graph-bipartite/

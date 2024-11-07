@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '204'
+  TITLE_CN: 计数质数
+  URL: https://leetcode.cn/problems/count-primes/

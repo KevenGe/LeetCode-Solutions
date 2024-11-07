@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '153'
+  TITLE_CN: 寻找旋转排序数组中的最小值
+  URL: https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/

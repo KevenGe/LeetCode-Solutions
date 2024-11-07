@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '80'
+  TITLE_CN: 删除有序数组中的重复项 II
+  URL: https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/

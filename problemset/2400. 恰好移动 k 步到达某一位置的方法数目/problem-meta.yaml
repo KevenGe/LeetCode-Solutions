@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '2400'
+  TITLE_CN: 恰好移动 k 步到达某一位置的方法数目
+  URL: https://leetcode.cn/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/

@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '1658'
+  TITLE_CN: 将 x 减到 0 的最小操作数
+  URL: https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero/

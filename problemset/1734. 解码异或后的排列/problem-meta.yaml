@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '1734'
+  TITLE_CN: 解码异或后的排列
+  URL: https://leetcode.cn/problems/decode-xored-permutation/

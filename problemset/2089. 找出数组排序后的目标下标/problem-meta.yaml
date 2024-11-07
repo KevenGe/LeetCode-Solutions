@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '2089'
+  TITLE_CN: 找出数组排序后的目标下标
+  URL: https://leetcode.cn/problems/find-target-indices-after-sorting-array/

@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '406'
+  TITLE_CN: 根据身高重建队列
+  URL: https://leetcode.cn/problems/queue-reconstruction-by-height/

@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '255'
+  TITLE_CN: 验证前序遍历序列二叉搜索树
+  URL: https://leetcode.cn/problems/verify-preorder-sequence-in-binary-search-tree/

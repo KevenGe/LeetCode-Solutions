@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '2115'
+  TITLE_CN: 从给定原材料中找到所有可以做出的菜
+  URL: https://leetcode.cn/problems/find-all-possible-recipes-from-given-supplies/

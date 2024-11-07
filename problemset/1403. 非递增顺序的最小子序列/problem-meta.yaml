@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '1403'
+  TITLE_CN: 非递增顺序的最小子序列
+  URL: https://leetcode.cn/problems/minimum-subsequence-in-non-increasing-order/

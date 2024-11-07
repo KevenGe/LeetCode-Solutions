@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '82'
+  TITLE_CN: 删除排序链表中的重复元素 II
+  URL: https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/

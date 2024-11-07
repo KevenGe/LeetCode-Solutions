@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '999'
+  TITLE_CN: 可以被一步捕获的棋子数
+  URL: https://leetcode.cn/problems/available-captures-for-rook/

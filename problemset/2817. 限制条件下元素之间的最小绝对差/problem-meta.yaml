@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '2817'
+  TITLE_CN: 限制条件下元素之间的最小绝对差
+  URL: https://leetcode.cn/problems/minimum-absolute-difference-between-elements-with-constraint/

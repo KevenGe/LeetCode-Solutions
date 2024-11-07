@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '1663'
+  TITLE_CN: 具有给定数值的最小字符串
+  URL: https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value/

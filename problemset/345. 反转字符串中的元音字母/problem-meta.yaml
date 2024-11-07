@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '345'
+  TITLE_CN: 反转字符串中的元音字母
+  URL: https://leetcode.cn/problems/reverse-vowels-of-a-string/

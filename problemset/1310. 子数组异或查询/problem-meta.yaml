@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '1310'
+  TITLE_CN: 子数组异或查询
+  URL: https://leetcode.cn/problems/xor-queries-of-a-subarray/

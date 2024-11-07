@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '606'
+  TITLE_CN: 根据二叉树创建字符串
+  URL: https://leetcode.cn/problems/construct-string-from-binary-tree/

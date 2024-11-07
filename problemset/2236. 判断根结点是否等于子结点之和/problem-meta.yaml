@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '2236'
+  TITLE_CN: 判断根结点是否等于子结点之和
+  URL: https://leetcode.cn/problems/root-equals-sum-of-children/

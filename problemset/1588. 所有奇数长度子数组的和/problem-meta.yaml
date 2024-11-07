@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '1588'
+  TITLE_CN: 所有奇数长度子数组的和
+  URL: https://leetcode.cn/problems/sum-of-all-odd-length-subarrays/

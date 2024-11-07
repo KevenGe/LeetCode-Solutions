@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '146'
+  TITLE_CN: LRU 缓存
+  URL: https://leetcode.cn/problems/lru-cache/

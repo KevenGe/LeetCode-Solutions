@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '2373'
+  TITLE_CN: 矩阵中的局部最大值
+  URL: https://leetcode.cn/problems/largest-local-values-in-a-matrix/
