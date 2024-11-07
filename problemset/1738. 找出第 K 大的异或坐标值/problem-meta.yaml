@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '1738'
+  TITLE_CN: 找出第 K 大的异或坐标值
+  URL: https://leetcode.cn/problems/find-kth-largest-xor-coordinate-value/

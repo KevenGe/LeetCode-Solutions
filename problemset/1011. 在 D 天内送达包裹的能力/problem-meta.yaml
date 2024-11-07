@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '1011'
+  TITLE_CN: 在 D 天内送达包裹的能力
+  URL: https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/

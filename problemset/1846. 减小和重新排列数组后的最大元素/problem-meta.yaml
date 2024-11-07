@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '1846'
+  TITLE_CN: 减小和重新排列数组后的最大元素
+  URL: https://leetcode.cn/problems/maximum-element-after-decreasing-and-rearranging/

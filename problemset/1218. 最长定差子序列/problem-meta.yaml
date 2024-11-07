@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '1218'
+  TITLE_CN: 最长定差子序列
+  URL: https://leetcode.cn/problems/longest-arithmetic-subsequence-of-given-difference/

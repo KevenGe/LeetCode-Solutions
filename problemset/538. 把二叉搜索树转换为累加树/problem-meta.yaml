@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '538'
+  TITLE_CN: 把二叉搜索树转换为累加树
+  URL: https://leetcode.cn/problems/convert-bst-to-greater-tree/

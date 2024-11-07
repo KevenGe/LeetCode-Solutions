@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '1005'
+  TITLE_CN: K 次取反后最大化的数组和
+  URL: https://leetcode.cn/problems/maximize-sum-of-array-after-k-negations/

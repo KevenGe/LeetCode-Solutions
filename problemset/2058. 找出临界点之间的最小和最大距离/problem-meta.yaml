@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '2058'
+  TITLE_CN: 找出临界点之间的最小和最大距离
+  URL: https://leetcode.cn/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/

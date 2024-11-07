@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '2042'
+  TITLE_CN: 检查句子中的数字是否递增
+  URL: https://leetcode.cn/problems/check-if-numbers-are-ascending-in-a-sentence/

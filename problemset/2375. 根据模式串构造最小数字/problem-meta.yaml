@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '2375'
+  TITLE_CN: 根据模式串构造最小数字
+  URL: https://leetcode.cn/problems/construct-smallest-number-from-di-string/

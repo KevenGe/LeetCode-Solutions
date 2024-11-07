@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '400'
+  TITLE_CN: 第 N 位数字
+  URL: https://leetcode.cn/problems/nth-digit/

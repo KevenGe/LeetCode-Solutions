@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '769'
+  TITLE_CN: 最多能完成排序的块
+  URL: https://leetcode.cn/problems/max-chunks-to-make-sorted/

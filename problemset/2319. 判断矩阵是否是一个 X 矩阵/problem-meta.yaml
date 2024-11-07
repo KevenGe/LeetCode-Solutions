@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '2319'
+  TITLE_CN: 判断矩阵是否是一个 X 矩阵
+  URL: https://leetcode.cn/problems/check-if-matrix-is-x-matrix/

@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '2180'
+  TITLE_CN: 统计各位数字之和为偶数的整数个数
+  URL: https://leetcode.cn/problems/count-integers-with-even-digit-sum/

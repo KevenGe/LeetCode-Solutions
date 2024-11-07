@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: HARD
+  ID: '2060'
+  TITLE_CN: 同源字符串检测
+  URL: https://leetcode.cn/problems/check-if-an-original-string-exists-given-two-encoded-strings/

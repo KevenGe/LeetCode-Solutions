@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '524'
+  TITLE_CN: 通过删除字母匹配到字典里最长单词
+  URL: https://leetcode.cn/problems/longest-word-in-dictionary-through-deleting/

@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '2364'
+  TITLE_CN: 统计坏数对的数目
+  URL: https://leetcode.cn/problems/count-number-of-bad-pairs/

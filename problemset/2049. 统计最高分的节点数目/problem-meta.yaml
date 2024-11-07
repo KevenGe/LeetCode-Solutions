@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '2049'
+  TITLE_CN: 统计最高分的节点数目
+  URL: https://leetcode.cn/problems/count-nodes-with-the-highest-score/

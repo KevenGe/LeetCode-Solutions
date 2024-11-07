@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '1442'
+  TITLE_CN: 形成两个异或相等数组的三元组数目
+  URL: https://leetcode.cn/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/

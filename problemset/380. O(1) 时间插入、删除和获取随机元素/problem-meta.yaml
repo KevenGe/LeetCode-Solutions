@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '380'
+  TITLE_CN: O(1) 时间插入、删除和获取随机元素
+  URL: https://leetcode.cn/problems/insert-delete-getrandom-o1/

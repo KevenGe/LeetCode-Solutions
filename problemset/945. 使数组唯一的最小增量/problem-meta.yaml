@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '945'
+  TITLE_CN: 使数组唯一的最小增量
+  URL: https://leetcode.cn/problems/minimum-increment-to-make-array-unique/

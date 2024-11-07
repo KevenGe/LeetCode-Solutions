@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '720'
+  TITLE_CN: 词典中最长的单词
+  URL: https://leetcode.cn/problems/longest-word-in-dictionary/

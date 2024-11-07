@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: HARD
+  ID: '37'
+  TITLE_CN: 解数独
+  URL: https://leetcode.cn/problems/sudoku-solver/

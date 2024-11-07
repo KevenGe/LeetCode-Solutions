@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '1877'
+  TITLE_CN: 数组中最大数对和的最小值
+  URL: https://leetcode.cn/problems/minimize-maximum-pair-sum-in-array/

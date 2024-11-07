@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '2116'
+  TITLE_CN: 判断一个括号字符串是否有效
+  URL: https://leetcode.cn/problems/check-if-a-parentheses-string-can-be-valid/

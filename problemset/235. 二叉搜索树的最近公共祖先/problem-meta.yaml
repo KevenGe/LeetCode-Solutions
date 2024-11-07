@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '235'
+  TITLE_CN: 二叉搜索树的最近公共祖先
+  URL: https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree/

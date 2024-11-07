@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '467'
+  TITLE_CN: 环绕字符串中唯一的子字符串
+  URL: https://leetcode.cn/problems/unique-substrings-in-wraparound-string/

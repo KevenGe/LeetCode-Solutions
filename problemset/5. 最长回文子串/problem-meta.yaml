@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '5'
+  TITLE_CN: 最长回文子串
+  URL: https://leetcode.cn/problems/longest-palindromic-substring/

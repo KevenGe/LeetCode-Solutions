@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '19'
+  TITLE_CN: 删除链表的倒数第 N 个结点
+  URL: https://leetcode.cn/problems/remove-nth-node-from-end-of-list/

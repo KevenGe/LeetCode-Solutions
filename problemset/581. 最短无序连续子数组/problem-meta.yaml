@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '581'
+  TITLE_CN: 最短无序连续子数组
+  URL: https://leetcode.cn/problems/shortest-unsorted-continuous-subarray/

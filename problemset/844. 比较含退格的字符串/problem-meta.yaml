@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '844'
+  TITLE_CN: 比较含退格的字符串
+  URL: https://leetcode.cn/problems/backspace-string-compare/

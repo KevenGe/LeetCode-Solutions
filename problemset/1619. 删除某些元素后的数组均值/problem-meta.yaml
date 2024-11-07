@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '1619'
+  TITLE_CN: 删除某些元素后的数组均值
+  URL: https://leetcode.cn/problems/mean-of-array-after-removing-some-elements/

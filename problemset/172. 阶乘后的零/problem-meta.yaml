@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '172'
+  TITLE_CN: 阶乘后的零
+  URL: https://leetcode.cn/problems/factorial-trailing-zeroes/

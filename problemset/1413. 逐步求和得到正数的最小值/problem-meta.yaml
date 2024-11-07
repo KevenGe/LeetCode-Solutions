@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '1413'
+  TITLE_CN: 逐步求和得到正数的最小值
+  URL: https://leetcode.cn/problems/minimum-value-to-get-positive-step-by-step-sum/

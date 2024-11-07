@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '1071'
+  TITLE_CN: 字符串的最大公因子
+  URL: https://leetcode.cn/problems/greatest-common-divisor-of-strings/

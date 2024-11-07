@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: EASY
+  ID: '1893'
+  TITLE_CN: 检查是否区域内所有整数都被覆盖
+  URL: https://leetcode.cn/problems/check-if-all-the-integers-in-a-range-are-covered/

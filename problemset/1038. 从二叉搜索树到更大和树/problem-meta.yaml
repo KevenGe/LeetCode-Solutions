@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '1038'
+  TITLE_CN: 从二叉搜索树到更大和树
+  URL: https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/

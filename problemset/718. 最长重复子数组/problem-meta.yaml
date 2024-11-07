@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '718'
+  TITLE_CN: 最长重复子数组
+  URL: https://leetcode.cn/problems/maximum-length-of-repeated-subarray/
