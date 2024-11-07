@@ -28,29 +28,30 @@ def parse_problem_dir(problem_dir: Path) -> Any:
         )
 
     solution_num = get_solution_num(problem_dir)
+    problem_dir_url = "../problemset/"+quote(problem_dir.name) + "/"
 
     solutions = []
     for solution_idx in range(solution_num):
         if solution_idx == 0:
             solutions.append(
                 {
-                    "Readme": quote(
+                    "Readme": (
                         str(
-                            problem_dir / "readme.md"
+                            problem_dir_url + "readme.md"
                             if (problem_dir / "readme.md").exists()
                             else ""
                         )
                     ),
-                    "C++": quote(
+                    "C++": (
                         str(
-                            problem_dir / "solution.cpp"
+                            problem_dir_url + "solution.cpp"
                             if (problem_dir / "solution.cpp").exists()
                             else ""
                         )
                     ),
-                    "Python": quote(
+                    "Python": (
                         str(
-                            problem_dir / "solution.py"
+                            problem_dir_url + "solution.py"
                             if (problem_dir / "solution.py").exists()
                             else ""
                         )
@@ -60,16 +61,16 @@ def parse_problem_dir(problem_dir: Path) -> Any:
         else:
             solutions.append(
                 {
-                    "Readme": quote(
+                    "Readme": (
                         str(
-                            problem_dir / "readme_v{}.md"
+                            problem_dir_url + "readme_v{}.md"
                             if (problem_dir / "readme_v{}.md").exists()
                             else ""
                         )
                     ),
-                    "C++": quote(
+                    "C++": (
                         str(
-                            problem_dir / "solution_v{}.cpp".format(solution_idx + 1)
+                            problem_dir_url + "solution_v{}.cpp".format(solution_idx + 1)
                             if (
                                 problem_dir
                                 / "solution_v{}.cpp".format(solution_idx + 1)
@@ -77,9 +78,9 @@ def parse_problem_dir(problem_dir: Path) -> Any:
                             else ""
                         )
                     ),
-                    "Python": quote(
+                    "Python": (
                         str(
-                            problem_dir / "solution_v{}.py".format(solution_idx + 1)
+                            problem_dir_url + "solution_v{}.py".format(solution_idx + 1)
                             if (
                                 problem_dir / "solution_v{}.py".format(solution_idx + 1)
                             ).exists()
