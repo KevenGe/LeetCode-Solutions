@@ -2,7 +2,7 @@
 
 ## 题目
 
-为保证权益，题目请参考 [**${x["ID"]}. ${x["TITLE_CN"]}**(From LeetCode)](${x["URL"]})。
+为保证权益，题目请参考 <a href='${x["URL"]}' target="_blank">**${x["ID"]}. ${x["TITLE_CN"]}**(From LeetCode)</a>.
 
 % for solution in x["SOLUTIONS"]:
 
