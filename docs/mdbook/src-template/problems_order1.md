@@ -1,24 +1,10 @@
 # Problems (Order By Number)
 
-| 序号  | 题目  | 难度  | Readme |  C++  |  Py   |
-| :---: | :---: | :---: | :----: | :---: | :---: |
+| 序号  | 题目  | 难度  | 
+| :---: | :---: | :---: |
 % for x in problemset:
-% for solution in x["SOLUTIONS"]:
 | ${x["ID"]} \
-|  [${x["TITLE_CN"]}](${x["URL"]}) \
+|  [${x["TITLE_CN"]}](./problems/${x["ID"]|u}.%20${x["TITLE_CN_NO_SPACE"]}.md) \
 |  ${x["HARD_LEVEL"]} \
-|\
-% if solution["Readme"] != "":
-[✔️(Click)](${solution["Readme"]}) \
-% endif
-|\
-% if solution["C++"] != "":
-[✔️(Click)](${solution["C++"]}) \
-% endif
-|\
-% if solution["Python"] != "":
-[✔️(Click)](${solution["Python"]}) \
-% endif
 |
-% endfor
 % endfor
