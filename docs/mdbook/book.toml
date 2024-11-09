@@ -1,6 +1,9 @@
 [book]
-authors = ["KevenGe"]
+authors = ["Qifeng"]
 language = "zh"
 multilingual = false
 src = "src"
 title = "LeetCode-Solutions"
+
+[output.html]
+reset-numbering = true
