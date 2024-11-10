@@ -38,8 +38,8 @@ def parse_problem_dir(problem_dir: Path) -> Any:
                 {
                     "Readme": (
                         str(
-                            problem_dir_url + "readme.md"
-                            if (problem_dir / "readme.md").exists()
+                            problem_dir_url + "solution.md"
+                            if (problem_dir / "solution.md").exists()
                             else ""
                         )
                     ),
@@ -64,8 +64,8 @@ def parse_problem_dir(problem_dir: Path) -> Any:
                 {
                     "Readme": (
                         str(
-                            problem_dir_url + "readme_v{}.md"
-                            if (problem_dir / "readme_v{}.md").exists()
+                            problem_dir_url + "solution_v{}.md"
+                            if (problem_dir / "solution_v{}.md").exists()
                             else ""
                         )
                     ),
