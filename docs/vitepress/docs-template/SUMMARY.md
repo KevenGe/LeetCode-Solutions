@@ -11,6 +11,6 @@
 
 % for x in problemset:
 % for solution in x["SOLUTIONS"]:
-- [${x["ID"]}. ${x["TITLE_CN"]}](./problems/${x["ID"]|u}.%20${x["TITLE_CN_NO_SPACE"]}.md)
+- [${x["ID"]}. ${x["TITLE_CN"]}](./problems/${x["ID_NO_SPACE"]}.%20${x["TITLE_CN_NO_SPACE"]}.md)
 % endfor
 % endfor

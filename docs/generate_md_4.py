@@ -94,7 +94,8 @@ def parse_problem_dir(problem_dir: Path) -> Any:
             )
 
     return {
-        "ID": meta_data["META"]["ID"],
+        "ID": str(meta_data["META"]["ID"]),
+        "ID_NO_SPACE": str(meta_data["META"]["ID"]).replace(" ", "%20"),
         "TITLE_CN": meta_data["META"]["TITLE_CN"],
         "TITLE_CN_NO_SPACE": meta_data["META"]["TITLE_CN"].replace(" ", "%20"),
         "URL": meta_data["META"]["URL"],
