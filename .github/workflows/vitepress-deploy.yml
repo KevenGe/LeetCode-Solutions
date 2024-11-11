@@ -47,6 +47,11 @@ jobs:
         run: |
           cd ./docs/vitepress
           bun install
+      - name: Build My Markdown Content
+        run: |
+          pip3 install loguru mako
+          cd ./docs
+          python ./generate_md_4.py
       - name: Build with VitePress
         # run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
         run: |
