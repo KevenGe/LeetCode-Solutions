@@ -9,3 +9,10 @@ __pycache__/*
 
 # cmake
 build
+
+# cache
+cache
+.cache
+
+# nodejs
+node_modules
