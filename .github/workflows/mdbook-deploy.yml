@@ -1,7 +1,7 @@
 name: MDBook-Deploy
 
 on:
-  push:
+  # push:
   workflow_dispatch:
 
 jobs:

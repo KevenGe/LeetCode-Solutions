@@ -1,0 +1,219 @@
+from typing import Any
+from pathlib import Path
+import re
+from urllib.parse import quote
+from functools import cmp_to_key
+from io import StringIO
+import yaml
+import json
+
+from loguru import logger
+from mako.template import Template
+from mako.runtime import Context
+
+
+def parse_problem_dir(problem_dir: Path) -> Any:
+    with open(problem_dir / "problem-meta.yaml", "r") as f:
+        meta_data = yaml.load(f, yaml.Loader)
+
+    def get_solution_num(problem_dir: Path) -> int:
+        t = list(problem_dir.glob("solution_v*.*"))
+
+        if len(t) == 0:
+            return 1
+
+        return max(
+            map(
+                lambda x: int(re.match("^solution_v(.*?)\\.(.*?)$", x.name).group(1)), t  # type: ignore
+            )
+        )
+
+    solution_num = get_solution_num(problem_dir)
+    # problem_dir_url = "../problemset/" + quote(problem_dir.name) + "/"
+    problem_dir_url = "../problemset/" + problem_dir.name + "/"
+
+    solutions = []
+    for solution_idx in range(solution_num):
+        if solution_idx == 0:
+            solutions.append(
+                {
+                    "Readme": (
+                        str(
+                            problem_dir_url + "solution.md"
+                            if (problem_dir / "solution.md").exists()
+                            else ""
+                        )
+                    ),
+                    "C++": (
+                        str(
+                            problem_dir_url + "solution.cpp"
+                            if (problem_dir / "solution.cpp").exists()
+                            else ""
+                        )
+                    ),
+                    "Python": (
+                        str(
+                            problem_dir_url + "solution.py"
+                            if (problem_dir / "solution.py").exists()
+                            else ""
+                        )
+                    ),
+                }
+            )
+        else:
+            solutions.append(
+                {
+                    "Readme": (
+                        str(
+                            problem_dir_url + "solution_v{}.md"
+                            if (problem_dir / "solution_v{}.md").exists()
+                            else ""
+                        )
+                    ),
+                    "C++": (
+                        str(
+                            problem_dir_url
+                            + "solution_v{}.cpp".format(solution_idx + 1)
+                            if (
+                                problem_dir
+                                / "solution_v{}.cpp".format(solution_idx + 1)
+                            ).exists()
+                            else ""
+                        )
+                    ),
+                    "Python": (
+                        str(
+                            problem_dir_url + "solution_v{}.py".format(solution_idx + 1)
+                            if (
+                                problem_dir / "solution_v{}.py".format(solution_idx + 1)
+                            ).exists()
+                            else ""
+                        )
+                    ),
+                }
+            )
+
+    return {
+        "ID": str(meta_data["META"]["ID"]),
+        "ID_NO_SPACE": str(meta_data["META"]["ID"]).replace(" ", "%20"),
+        "TITLE_CN": meta_data["META"]["TITLE_CN"],
+        "TITLE_CN_NO_SPACE": meta_data["META"]["TITLE_CN"].replace(" ", "%20"),
+        "URL": meta_data["META"]["URL"],
+        "HARD_LEVEL": meta_data["META"]["HARD_LEVEL"],
+        "SOLUTIONS": solutions,
+    }
+
+
+def parse_problemset_dir(problemset_dir: Path) -> Any:
+    return list(map(parse_problem_dir, problemset_dir.iterdir()))
+
+
+def sort_problemset(problemset: list[Any]):
+
+    def my_cmp(a: Any, b: Any) -> int:
+        a = str(a["ID"])
+        b = str(b["ID"])
+
+        if a.startswith("L") and b.startswith("L"):
+            return int(a[4:]) - int(b[4:])
+
+        if a.startswith("L"):
+            return 1
+
+        if b.startswith("L"):
+            return -1
+
+        return int(a) - int(b)
+
+    return sorted(problemset, key=cmp_to_key(my_cmp))
+
+
+def main() -> None:
+    logger.info("program begin")
+
+    problemset_dir_path = Path("../problemset")
+    logger.info("problem set path = {}", str(problemset_dir_path))
+
+    problemset = parse_problemset_dir(problemset_dir_path)
+
+    # Sort
+    problemset = sort_problemset(problemset)
+
+    problem_num = len(problemset)
+
+    # problem_easy_num, problem_medium_num, problem_hard_num =
+    problem_easy_num = len(
+        list(filter(lambda x: x["HARD_LEVEL"] == "EASY", problemset))
+    )
+    problem_medium_num = len(
+        list(filter(lambda x: x["HARD_LEVEL"] == "MEDIUM", problemset))
+    )
+    problem_hard_num = len(
+        list(filter(lambda x: x["HARD_LEVEL"] == "HARD", problemset))
+    )
+
+    logger.info("problem num = {}", problem_num)
+
+    # write multi templates
+
+    mdbook_dir_path = Path("./vitepress")
+    for md_file_path in (mdbook_dir_path / "docs-template").iterdir():
+        if md_file_path.is_dir():
+            continue
+
+        buf = StringIO()
+        my_template = Template(filename=str(md_file_path))
+        ctx = Context(
+            buf,
+            problem_num=problem_num,
+            problem_easy_num=problem_easy_num,
+            problem_medium_num=problem_medium_num,
+            problem_hard_num=problem_hard_num,
+            problemset=problemset,
+        )
+
+        my_template.render_context(ctx)
+        with open(mdbook_dir_path / "docs" / md_file_path.name, "w") as f:
+            f.write(buf.getvalue())
+
+    # generate md
+
+    for ps in problemset:
+        buf = StringIO()
+        my_template = Template(
+            filename=str(mdbook_dir_path / "docs-template" / "problems" / "problem.md")
+        )
+        ctx = Context(buf, x=ps)
+
+        my_template.render_context(ctx)
+        with open(
+            (
+                mdbook_dir_path
+                / "docs"
+                / "problems"
+                / (str(ps["ID"]) + ". " + ps["TITLE_CN"] + ".md")
+            ),
+            "w",
+        ) as f:
+            f.write(buf.getvalue())
+
+    # generate items json for vitepress
+    with open(
+        (mdbook_dir_path / "docs" / ".vitepress" / "problem_items.json"), "w"
+    ) as f:
+        json.dump(
+            list(
+                map(
+                    lambda x: {
+                        "text": str(x["ID"]) + ". " + x["TITLE_CN"] + ".md",
+                        "link": "/problems/" + str(x["ID"]) + ". " + x["TITLE_CN"] + ".md",
+                    },
+                    problemset,
+                )
+            ),
+            f,
+        )
+
+
+if __name__ == "__main__":
+    main()
