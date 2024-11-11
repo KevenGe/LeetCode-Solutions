@@ -16,7 +16,7 @@ export default defineConfig({
       },
       {
         text: "Problems",
-        link: "/Problems_order1",
+        link: "/problems_order1",
       },
     ],
 
@@ -30,7 +30,7 @@ export default defineConfig({
           },
           {
             text: "Problems",
-            link: "/Problems_order1",
+            link: "/problems_order1",
           },
         ],
       },
