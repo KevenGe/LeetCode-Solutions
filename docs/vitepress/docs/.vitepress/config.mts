@@ -6,7 +6,7 @@ import problem_items from "./problem_items.json";
 export default defineConfig({
   title: "LeetCode Solutions",
   description: "Solutons For LeetCode Problems",
-  base: '/LeetCode-Solutions/',
+  base: "/LeetCode-Solutions/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -40,16 +40,19 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [
-      { icon: "github", link: "https://github.com/KevenGe" },
-    ],
+    socialLinks: [{ icon: "github", link: "https://github.com/KevenGe" }],
 
     search: {
       provider: "local",
     },
+
+    externalLinkIcon: true,
   },
+
   markdown: {
     lineNumbers: true,
     math: true,
   },
+
+  lastUpdated: true,
 });

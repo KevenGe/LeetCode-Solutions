@@ -16,3 +16,6 @@ cache
 
 # nodejs
 node_modules
+
+# dist
+dist
