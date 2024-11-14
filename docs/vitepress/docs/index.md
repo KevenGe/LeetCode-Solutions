@@ -12,7 +12,7 @@ hero:
       link: "/Introduction"
     - theme: alt
       text: "Problems"
-      link: "/Problems_order1"
+      link: "/problems_order1"
 
 features:
   - title: Feature A
