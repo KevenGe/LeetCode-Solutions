@@ -1,7 +1,5 @@
 # LeetCode-Solutions
 
-[![MDBook-Deploy](https://github.com/KevenGe/LeetCode-Solutions/actions/workflows/mdbook-deploy.yml/badge.svg?branch=feature%2Fwith_github_pages&event=push)](https://github.com/KevenGe/LeetCode-Solutions/actions/workflows/mdbook-deploy.yml)
-
 ## Introduce
 
 The solutions of leetcode, all of which is write by myself.
