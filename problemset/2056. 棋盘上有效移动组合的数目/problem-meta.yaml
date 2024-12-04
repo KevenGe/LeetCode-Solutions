@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: HARD
+  ID: '2056'
+  TITLE_CN: 棋盘上有效移动组合的数目
+  URL: https://leetcode.cn/problems/number-of-valid-move-combinations-on-chessboard/
