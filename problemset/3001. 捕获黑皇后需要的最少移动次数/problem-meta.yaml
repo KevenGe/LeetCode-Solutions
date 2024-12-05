@@ -1,0 +1,5 @@
+META:
+  HARD_LEVEL: MEDIUM
+  ID: '3001'
+  TITLE_CN: 捕获黑皇后需要的最少移动次数
+  URL: https://leetcode.cn/problems/minimum-moves-to-capture-the-queen/
